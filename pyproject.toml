@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qtax"
+version = "1.0.0"
+description = "Local-first CLI for authors and small businesses to estimate quarterly estimated taxes from income and expense entries."
+requires-python = ">=3.8"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Asdale Dynamics, LLC"}]
+
+[project.scripts]
+qtax = "qtax.cli:main"
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "BLE", "C4", "I"]
+ignore = ["E501"]
